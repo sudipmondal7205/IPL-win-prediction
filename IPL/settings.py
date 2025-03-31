@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f$7bo-0u+w7xw$xio%itjx%^e*m1flw@u&xzeua8(@o$#c7)k_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ipl-win-prediction.onrender.com"]
 
 
 # Application definition
