@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}| About{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="card shadow-lg p-4 rounded-4">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="{% static 'images/sudip_pic.jpg' %}" alt="Sudip" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+                <h3 class="mb-3">Sudip Mondal</h3>
+                <p class="text-muted">Machine Learning Enthusiast</p>
+            </div>
+            <div class="col-md-8">
+                <h2 class="mb-4">About IPL Win Predictor</h2>
+                <p class="lead">
+                    Welcome to the IPL Win Prediction application! This tool helps predict the winning probability 
+                    of IPL matches using machine learning algorithms.
+                </p>
+                <div class="mt-4">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li>Real-time win probability predictions</li>
+                        <li>Based on historical IPL match data</li>
+                        <li>User-friendly interface</li>
+                        <li>Instant results</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Technology Stack</h4>
+                    <p>
+                        Built using Django framework, Python for machine learning, and Bootstrap for the frontend. 
+                        The prediction model is trained on historical IPL match data to provide accurate win probabilities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

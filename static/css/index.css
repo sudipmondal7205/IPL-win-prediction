@@ -1,0 +1,275 @@
+.label-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.dropdown button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#teamButton1 {
+    background-color: #007bff;
+    color: white;
+}
+
+#teamButton1:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#teamButton2 {
+    background-color: #28a745;
+    color: white;
+}
+
+#teamButton2:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 12px;
+    border: none;
+    padding: 5px;
+}
+
+.dropdown-item {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 8px;
+    margin: 2px 0;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.dropdown-item:active {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1);
+}
+
+
+.label-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.label-text:hover {
+    transform: scale(1.05);
+    color: #ff7e5f;
+}
+
+
+.btn-success:hover {
+background-color: #218838;
+}
+
+
+.card {
+    background: linear-gradient(145deg, #e0eafc, #cfdef3);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:hover {
+    border-color: #007bff;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #12efdc, #0fc4f2) !important;
+    border: none !important;
+    color: white !important;
+    border-radius: 3px !important;
+    padding: 1rem !important;
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    padding: 10px 20px !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2) !important;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #0d9ef2, #043d6e) !important;
+    box-shadow: 0 8px 20px rgba(103, 58, 183, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+.input-form {
+    width: 50%;
+    display: flex;
+}
+
+@media screen and (max-width: 988px) {
+    .input-form{
+        width: 80%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }    
+}
+
+.output-form {
+    width:30%;
+    height: 340px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    background-color: #d0def3;
+    margin-top: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (max-width: 988px) {
+    .output-form{
+        width: 80%;
+        height: fit-content;
+    }    
+    
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.output-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.show-output {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    justify-items: left;
+    border-radius: 10px;
+}
+
+.output-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.input-output{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: flex-end;
+    background-color: #9acbd0;
+}
+
+@media screen and (max-width: 988px) {
+    .input-output{
+        height: fit-content;
+    }    
+    
+}
+
+.team-chance{
+    background-color: #fff;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.team-name{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-weight: bold;
+}
+
+.navbar{
+    background-color: #123458;
+    z-index: 3;
+    top: 0px;
+    position: sticky;
+}
+
+.color{
+    color: white;
+}
+
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
