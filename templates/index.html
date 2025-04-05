@@ -3,105 +3,117 @@
 {% block title %}| Home{% endblock title %}
 
 {% block body %}
-
-
 <form method="POST" onsubmit="return validateForm()">
-<div class="input-output">
+  <div class="input-output">
     <div class="input-form">
-            {% csrf_token %}
-            <div class="container mt-5 px-0">
-                <div class="d-flex justify-content-center gap-4 mb-4 flex-wrap">
-                    <!-- Batting Team Dropdown -->
-                    <div class="d-flex flex-column align-items-center">
-                        <label for="teamButton1" class="label-text">Batting Team</label>
-                        <div class="dropdown">
-                            <button id="teamButton1" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select Team
-                            </button>
-                            <ul class="dropdown-menu">
-                                {% for team in teams %}
-                                <li>
-                                    <a class="dropdown-item" onclick="selectTeam('teamButton1', 'batting_team', '{{ team }}')">{{ team }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            <input type="hidden" name="batting_team" id="batting_team">
-                        </div>
-                    </div>
-                    
-                    <!-- Bowling Team Dropdown -->
-                    <div class="d-flex flex-column align-items-center">
-                        <label for="teamButton2" class="label-text">Bowling Team</label>
-                        <div class="dropdown">
-                            <button id="teamButton2" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select Team
-                            </button>
-                            <ul class="dropdown-menu">
-                                {% for team in teams %}
-                                <li>
-                                    <a class="dropdown-item" onclick="selectTeam('teamButton2', 'bowling_team', '{{ team }}')">{{ team }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            <input type="hidden" name="bowling_team" id="bowling_team">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Modern Input Form -->
-                <div class="card shadow-lg p-4 rounded-4" style="margin: 0 auto;">
-                    <h3 class="text-center mb-4">Cricket Score Input</h3>
-                    
-                    <div class="row g-3">
-                        <!-- Inning Input -->
-                        <div class="col-md-6">
-                            <label for="inningInput" class="form-label">Inning</label>
-                            <input type="number" name="inning" class="form-control rounded-3" id="inningInput" placeholder="Enter inning number" min="1" max="2">
-                        </div>
-            
-                        <!-- Over Input -->
-                        <div class="col-md-6">
-                            <label for="overInput" class="form-label">Over</label>
-                            <input type="number" name="over" class="form-control rounded-3" id="overInput" placeholder="Enter over number" min="0" max="20">
-                        </div>
-            
-                        <!-- Ball Input -->
-                        <div class="col-md-6">
-                            <label for="ballInput" class="form-label">Ball</label>
-                            <input type="number" name="ball" class="form-control rounded-3" id="ballInput" placeholder="Enter ball number" min="0">
-                        </div>
-            
-                        <!-- Runs Input -->
-                        <div class="col-md-6">
-                            <label for="runsInput" class="form-label">Runs</label>
-                            <input type="number" name="runs" class="form-control rounded-3" id="runsInput" placeholder="Enter runs scored" min="0">
-                        </div>
-            
-                        <!-- Submit Button -->
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" name="submit_btn" class="submit-btn">Submit</button>
-                        </div>
-                    </div>
-                </div>
+      {% csrf_token %}
+      <div class="container mt-5 px-0">
+        <div class="d-flex justify-content-center gap-4 mb-4 flex-wrap">
+          <!-- Batting Team Dropdown -->
+          <div class="d-flex flex-column align-items-center">
+            <label for="teamButton1" class="label-text">Batting Team</label>
+            <div class="dropdown">
+              <button id="teamButton1" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Team
+              </button>
+              <ul class="dropdown-menu">
+                {% for team in teams %}
+                <li>
+                  <a class="dropdown-item" onclick="selectTeam('teamButton1', 'batting_team', '{{ team }}')">{{ team }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              <input type="hidden" name="batting_team" id="batting_team">
             </div>
+          </div>
+          
+          <!-- Bowling Team Dropdown -->
+          <div class="d-flex flex-column align-items-center">
+            <label for="teamButton2" class="label-text">Bowling Team</label>
+            <div class="dropdown">
+              <button id="teamButton2" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Team
+              </button>
+              <ul class="dropdown-menu">
+                {% for team in teams %}
+                <li>
+                  <a class="dropdown-item" onclick="selectTeam('teamButton2', 'bowling_team', '{{ team }}')">{{ team }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+              <input type="hidden" name="bowling_team" id="bowling_team">
+            </div>
+          </div>
+        </div>
         
+        <!-- Modern Input Form -->
+        <div class="card shadow-lg p-4 rounded-4" style="margin: 0 auto;">
+          <h3 class="text-center mb-4">Cricket Score Input</h3>
+          
+          <div class="row g-3">
+            <!-- Inning Input -->
+            <div class="col-md-6">
+              <label for="inningInput" class="form-label">Inning</label>
+              <input type="number" name="inning" class="form-control rounded-3" id="inningInput" placeholder="Enter inning number" min="1" max="2">
+            </div>
+    
+            <!-- Over Input -->
+            <div class="col-md-6">
+              <label for="overInput" class="form-label">Over</label>
+              <input type="number" name="over" class="form-control rounded-3" id="overInput" placeholder="Enter over number" min="0" max="20">
+            </div>
+    
+            <!-- Ball Input -->
+            <div class="col-md-6">
+              <label for="ballInput" class="form-label">Ball</label>
+              <input type="number" name="ball" class="form-control rounded-3" id="ballInput" placeholder="Enter ball number" min="0">
+            </div>
+    
+            <!-- Runs Input -->
+            <div class="col-md-6">
+              <label for="runsInput" class="form-label">Runs</label>
+              <input type="number" name="runs" class="form-control rounded-3" id="runsInput" placeholder="Enter runs scored" min="0">
+            </div>
+            
+            <!-- Wickets Input -->
+            <div class="col-md-6">
+              <label for="wicketsInput" class="form-label">Wickets</label>
+              <input type="number" name="wickets" class="form-control rounded-3" id="wicketsInput" placeholder="Enter wickets fallen" min="0" max="10">
+            </div>
+            
+            <!-- Target Input -->
+            <div class="col-md-6">
+              <label for="targetInput" class="form-label">Target (for 2nd inning)</label>
+              <input type="number" name="target" class="form-control rounded-3" id="targetInput" placeholder="Enter target runs" min="0">
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="col-12 text-center mt-4">
+              <button type="submit" name="submit_btn" class="submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="output-form">
-        <div>
-            <h3>Winning Probability</h3>
+      <div>
+        <h3>Winning Probability</h3>
+      </div>
+      <div class="">
+        <div class="show-output">
+          <div class="team-name output-text">{{ team1_name }}</div>
+          <div class="team-chance output-text">{{ team1_win }}</div>
         </div>
-        <div class="">
-            <div class="show-output">
-                <div class="team-name output-text">{{ team1_name }}</div>
-                <div class="team-chance output-text">{{ team1_win }}</div>
-            </div>
-            <div class="show-output">
-                <div class="team-name output-text">{{ team2_name }}</div>
-                <div class="team-chance output-text">{{ team2_win }}</div>
-            </div>
+        <div class="show-output">
+          <div class="team-name output-text">{{ team2_name }}</div>
+          <div class="team-chance output-text">{{ team2_win }}</div>
         </div>
+      </div>
     </div>
+  </div>
 </form>
-</div>
 
+<!-- Link to external CSS and JS files -->
+<link rel="stylesheet" href="/static/css/predictor.css">
+<script src="/static/js/predictor.js"></script>
 {% endblock body %}

@@ -1,0 +1,134 @@
+/* Base styles */
+.input-output {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .input-form, .output-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  /* Input form styles */
+  .card {
+    background: white;
+    border: none;
+  }
+  
+  .form-control {
+    height: 50px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+  }
+  
+  .label-text {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .dropdown-toggle {
+    width: 200px;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .dropdown-toggle:hover {
+    background: #e9ecef;
+    border-color: #d0d0d0;
+  }
+  
+  .dropdown-toggle::after {
+    float: right;
+    margin-top: 8px;
+  }
+  
+  .dropdown-menu {
+    width: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .submit-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #3a7bc8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Output form styles */
+  .output-form {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .output-form h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  .show-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .show-output:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  .team-chance {
+    font-weight: 700;
+    color: #4a90e2;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .input-output {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .input-form, .output-form {
+      width: 100%;
+    }
+  }

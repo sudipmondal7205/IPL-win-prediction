@@ -26,14 +26,24 @@ def index(request):
         over = request.POST.get('over')
         balls = request.POST.get('ball')
         runs = request.POST.get('runs')
-        print(batting_team)
-        print(bowling_team)
-        print(inning)
-        print(over)
-        print(balls)
-        print(runs)
-        input = pd.DataFrame(np.array([batting_team, bowling_team, inning, over, balls, runs]).reshape(1, -1), columns=['batting_team','bowling_team', 'inning', 'over', 'ball', 'runs'])
-        print(input)
+        wickets = request.POST.get('wickets')
+        against_run = request.POST.get('target')
+
+        if against_run == None:
+            against_run = 0
+        
+        if batting_team == bowling_team:
+            return HttpResponse("Please select different teams")
+        
+        print('batting team : ', batting_team)
+        print('bowling team : ', bowling_team)
+        print('inning : ', inning)
+        print('over : ', over)
+        print('balls : ', balls)
+        print('wickets : ', wickets)
+        print('runs : ', runs)
+        print('against run : ', against_run)
+        input = pd.DataFrame(np.array([batting_team, bowling_team, inning, over, balls, wickets, runs, against_run]).reshape(1, -1), columns=['batting_team','bowling_team', 'inning', 'over', 'ball', 'wickets', 'runs', 'against_run'])
         prediction = model.predict_proba(input)
         print(prediction)
         batting_team_win = round(prediction[0][0] * 100, ndigits=0)
