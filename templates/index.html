@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
+
 {% block title %}| Home{% endblock title %}
+
+{% load static %}
 
 {% block body %}
 <form method="POST" onsubmit="return validateForm()">
@@ -114,6 +117,6 @@
 </form>
 
 <!-- Link to external CSS and JS files -->
-<link rel="stylesheet" href="/static/css/predictor.css">
-<script src="/static/js/predictor.js"></script>
+<link rel="stylesheet" href="{% static "css/predictor.css" %}">
+<script src="{% static "js/predictor.js" %}"></script>
 {% endblock body %}
