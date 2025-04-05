@@ -37,7 +37,7 @@
   }
   
   .dropdown-toggle {
-    width: 200px;
+    width:250px;
     padding: 10px 15px;
     background: #f8f9fa;
     border: 2px solid #e0e0e0;
@@ -57,7 +57,7 @@
   }
   
   .dropdown-menu {
-    width: 200px;
+    width: 250px;
     max-height: 300px;
     overflow-y: auto;
   }

@@ -13,7 +13,7 @@ def index(request):
     teams = ["Chennai Super Kings", "Delhi Capitals", "Gujarat Titans", 
              "Kolkata Knight Riders", "Lucknow Super Giants", 
              "Mumbai Indians", "Royal Challengers Bangalore", 
-             "Sunrisers Hyderabad"]
+             "Sunrisers Hyderabad", "Rajasthan Royals", "Punjab Kings"]
     
     batting_team = 'Batting Team'
     bowling_team = 'Bowling Team'
